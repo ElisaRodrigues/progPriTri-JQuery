@@ -1,10 +1,9 @@
     <!DOCTYPE html>
-    <html lang="br">
+    <html lang="en">
     <head>
-        <title>Livraria do Infinito</title>
+        <title>EXE4</title>
         <meta charset="UTF-8">
-        <link href="app/views/principal/exe4.css" rel="stylesheet" type="text/css"/>
-
+        <link href="exe4.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <script>
@@ -39,24 +38,34 @@
 
      <div id = "abas">
          <ul>
+        <!---------------  TAB1  -------------------->
 
-             <?php foreach ($categorias as $categoria ): ?>
-                 <li id="aba<?= $categoria->getID()?>" class="selecionado"><?= $categoria->getNome()?></li>
-             <?php endforeach ?>
+        <li id="aba1" class="selecionado">Tab1</li>
+
+        <!---------------  TAB2  -------------------->
+
+        <li id="aba2">Tab2</li>
+
+        <!---------------  TAB3  -------------------->
+
+        <li id="aba3">Tab 3</li>
+
 
         </ul>
     </div>
 
     <div id="conteudos">
 
-        <?php foreach ($produtos as $produto): ?>
-            <div class="conteudo aba<?= $produto->getIdCategoria()?>">
-                <?= $produto->getIdCategoria(); ?>
-                <?= $produto->getNome(); ?>
-                <br>
-                <?= $produto->getDescricao(); ?>
-            </div>
-        <?php endforeach; ?>
+        <!---------------  ABA1  -------------------->
+        <div class="conteudo aba1"> Conteúdo da aba 1 </div>
+
+        <!---------------  ABA2  -------------------->
+
+        <div class="conteudo aba2"> Conteúdo da aba 2 </div>
+
+        <!---------------  ABA3  -------------------->
+
+        <div class="conteudo aba3"> Conteúdo da aba 3 </div>
 
     </div>
 

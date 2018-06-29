@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OLA MUNDO</title>
+
+    <style type="text/css">
+       div h2{
+            background-color: lightblue;
+            border: 1px solid lightblue;
+            margin: 0px;
+        }
+
+        div p {
+            border: 2px solid lightblue;
+            margin-top: 0px;
+        }
+
+
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $("#mostrar").hide();
+
+            /*-----------------------------------------*/
+                ////MÉTODOS SHOW/HIDE/TOGGLE
+
+            $("#ocultar").click (function () {
+                $("#principal").hide("slow");
+                $("#ocultar").hide();
+                $("#mostrar").show();
+            });
+
+            $("#mostrar").click(function () {
+                $("#principal").show("slow");
+                $("#mostrar").hide();
+                $("#ocultar").show();
+            });
+
+            $("#alternar").click(function () {
+                $("#principal").toggle("slow");
+            });
+
+            /*-----------------------------------------*/
+                ////MÉTODOS FADE - ESMAECER
+
+            $("#ocultarFadeOut").click(function () {
+                $("#principal").fadeOut("slow");
+            });
+
+            $("#mostrarFadeIn").click(function () {
+                $("#principal").fadeIn("slow");
+            });
+
+            $("#alternarFadeToggle").click(function () {
+                $("#principal").fadeToggle("slow");
+            });
+
+            /*-----------------------------------------*/
+                ////MÉTODOS SLIDE - DESLIZAR
+
+            $("#alternarSlide").click(function () {
+               $("#principal").slideToggle(5000);
+
+            });
+
+            $("#mostrarSlide").click(function () {
+                $("#principal").slideUp(5000);
+
+            });
+
+            $("#ocultarSlide").click(function () {
+                $("#principal").slideDown("slow");
+
+            });
+
+            /*-----------------------------------------*/
+                 ////EFEITOS ACORDION
+
+            $("#principal1 h2").click(function () {
+                $("#principal1 p").slideToggle("slow");
+                //$(this).parent().find("p").slideToggle("slow");
+
+            });
+
+            $("#principal2 h2").click(function () {
+                $("#principal2 p").slideToggle("slow");
+
+            });
+
+            $("#principal3 h2").click(function () {
+                $("#principal3 p").slideToggle("slow");
+
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+
+<H1>Tuts tuts quero ver</H1>
+
+<button id="mostrar" type="button">Mostrar</button>
+<button id="ocultar" type="button">Ocultar</button>
+<button id="alternar" type="button">Alternar</button>
+
+<button id="mostrarFadeIn" type="button">FadeIn</button>
+<button id="ocultarFadeOut" type="button">FadeOut</button>
+<button id="alternarFadeToggle" type="button">FadeToggle</button>
+
+<button id="mostrarSlide" type="button">SlideDown</button>
+<button id="ocultarSlide" type="button">SlideUp</button>
+<button id="alternarSlide" type="button">SlideToggle</button>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id turpis eu turpis consectetur euismod in eu mi. Phasellus sodales eleifend mi sed mollis. Nam vitae hendrerit felis, eget molestie dui. Fusce gravida ligula id dictum interdum. Ut vitae nibh vulputate, auctor nisi ut, feugiat turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in lorem eget mauris congue porta. Nunc elementum egestas ultrices. Mauris egestas metus suscipit orci imperdiet, eu rhoncus massa ultrices. Integer id est vitae dui elementum finibus sit amet id urna.</p>
+
+<div id="principal1">
+    <h2> Título1</h2>
+    <p>Nunc eu mollis arcu. Suspendisse vel urna a nisl venenatis vestibulum at sit amet nibh. Aliquam mollis eros quis velit dictum, ut finibus dui porta. Cras faucibus nibh eget efficitur tempor. Praesent accumsan neque eros, eget dignissim ante elementum vitae. Fusce in consequat nibh, consectetur porttitor mauris. Quisque quam sapien, vulputate id turpis eu, consectetur consequat lectus. Proin cursus luctus placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec finibus augue tortor, iaculis sodales nulla scelerisque sit amet. Aenean pharetra gravida nisl id hendrerit. Vivamus at sodales elit. Integer sed augue ut augue fringilla venenatis. Phasellus at augue justo. Pellentesque quis lacinia orci. </p>
+    </div>
+
+    <div id="principal2">
+        <h2> Título2 </h2>
+        <p>Pellentesque sit amet gravida velit. Duis dictum nibh semper velit tincidunt, et lacinia augue dapibus. In hac habitasse platea dictumst. Integer sed velit at ex congue rutrum. Sed vel magna quam. Sed elementum, urna sed fermentum blandit, quam tellus facilisis odio, in placerat ligula mi ut justo. Curabitur vel bibendum nisi, nec cursus lorem. Nullam luctus eget leo eu elementum. Integer vehicula nisi lorem, in sodales tellus dictum sit amet. Phasellus bibendum at quam nec pretium.</p>
+    </div>
+
+    <div id="principal3">
+        <h2> Título3 </h2>
+        <p>Pellentesque sit amet gravida velit. Duis dictum nibh semper velit tincidunt, et lacinia augue dapibus. In hac habitasse platea dictumst. Integer sed velit at ex congue rutrum. Sed vel magna quam. Sed elementum, urna sed fermentum blandit, quam tellus facilisis odio, in placerat ligula mi ut justo. Curabitur vel bibendum nisi, nec cursus lorem. Nullam luctus eget leo eu elementum. Integer vehicula nisi lorem, in sodales tellus dictum sit amet. Phasellus bibendum at quam nec pretium.</p>
+    </div>
+</body>
+</html>

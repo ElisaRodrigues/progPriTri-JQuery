@@ -1,0 +1,30 @@
+#abas{
+
+
+}
+
+ #abas ul{
+     display: inline;
+ }
+
+ #abas ul li{
+     border: solid 1px #ff5772;
+     display: inline-block;
+     padding: 10px 10px 5px;
+     border-radius: 10px 10px 0 0;
+ }
+
+ .selecionado{
+     background-color: #ff5772;
+     box-shadow: 5px  5px  5px #ffa09c;
+ }
+
+#conteudos{
+    border: solid 1px #ff5772;
+    border-radius: 2px;
+    padding: 10px;
+
+}
+
+
+

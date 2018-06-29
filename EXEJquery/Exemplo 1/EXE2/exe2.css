@@ -1,0 +1,36 @@
+.tabcontrol{
+    width: 100%;
+    overflow: hidden;;
+    height: 400px;
+}
+
+.tabcontrol #topo{
+    width: 100%;
+    overflow: hidden;;
+    cursor: hand;
+}
+
+.tabcontrol #principal{
+    width: 99%;
+    border: solid 1px;
+    overflow: hidden;;
+    height: 99%;
+}
+
+.tabcontrol .abas li{
+    float: left;
+    list-style: none;
+}
+
+.aba{
+    width: 100px;
+    height: 30px;
+    border: solid 1px;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+    padding-top: 5px;
+    background: lightpink;
+}
+
+
+

@@ -1,0 +1,73 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>EXE3</title>
+        <meta charset="UTF-8">
+        <link href="exe3.css" rel="stylesheet" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <script>
+
+            $(document).ready(function(){
+
+                //verifica se esta funcionando
+               // alert('Jquery funcionando');
+
+                //ao clicar em qualquer li
+                $("#abas ul li").click(function(){
+
+                    //remove a class de todos li
+                    $("#abas ul li").removeClass("selecionado");
+
+                    //adiciona a class apenas no clicado
+                    $(this).addClass("selecionado");
+
+                    //descobrir o id de quem eu cliquei
+                    var meuId =  $(this).attr("id");
+                    $(".conteudo").hide();
+                    $("."+meuId).show();
+                });
+
+            });
+
+        </script>
+
+
+    </head>
+    <body>
+
+     <div id = "abas">
+         <ul>
+        <!---------------  TAB1  -------------------->
+
+        <li id="aba1" class="selecionado">Tab1</li>
+
+        <!---------------  TAB2  -------------------->
+
+        <li id="aba2">Tab2</li>
+
+        <!---------------  TAB3  -------------------->
+
+        <li id="aba3">Tab 3</li>
+
+
+        </ul>
+    </div>
+
+    <div id="conteudos">
+
+        <!---------------  ABA1  -------------------->
+        <div class="conteudo aba1"> Conteúdo da aba 1 </div>
+
+        <!---------------  ABA2  -------------------->
+
+        <div class="conteudo aba2"> Conteúdo da aba 2 </div>
+
+        <!---------------  ABA3  -------------------->
+
+        <div class="conteudo aba3"> Conteúdo da aba 3 </div>
+
+    </div>
+
+    </body>
+    </html>

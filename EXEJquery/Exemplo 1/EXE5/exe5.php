@@ -1,10 +1,9 @@
     <!DOCTYPE html>
-    <html lang="br">
+    <html lang="en">
     <head>
-        <title>Livraria do Infinito</title>
+        <title>EXE5</title>
         <meta charset="UTF-8">
-        <link href="app/views/principal/exe4.css" rel="stylesheet" type="text/css"/>
-
+        <link href="exe5.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
         <script>
@@ -40,23 +39,27 @@
      <div id = "abas">
          <ul>
 
-             <?php foreach ($categorias as $categoria ): ?>
-                 <li id="aba<?= $categoria->getID()?>" class="selecionado"><?= $categoria->getNome()?></li>
-             <?php endforeach ?>
+        <?= foreach ($categorias as $categoria):?>
+
+        <li id="aba<?=$categoria->getId(); ?> "> <?= $categoria->getNome() ?></li>
+
+        <?= endforeach;?>
 
         </ul>
     </div>
 
     <div id="conteudos">
 
-        <?php foreach ($produtos as $produto): ?>
-            <div class="conteudo aba<?= $produto->getIdCategoria()?>">
-                <?= $produto->getIdCategoria(); ?>
-                <?= $produto->getNome(); ?>
-                <br>
-                <?= $produto->getDescricao(); ?>
-            </div>
-        <?php endforeach; ?>
+       <?= foreach ($produtos as $produto): ?>
+
+        <div class="conteudo aba1">
+            <?= $produto->getIdCategoria(); ?>
+            <?= $produto->getNome() ?>
+            <br>
+            <?= $produto->getdescricao() ?>
+        </div>
+
+    <?= endforeach; ?>
 
     </div>
 
