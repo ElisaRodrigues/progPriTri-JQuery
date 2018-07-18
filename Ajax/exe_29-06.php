@@ -16,29 +16,39 @@
         });
 
         //exercicio 2
-        $("#button21").click(function() {
+        $("#button2").click(function() {
             $.get("http://hawkman.fabricadesoftware.ifc.edu.br/~rafael/lojinha/ajax/produtos.php", function (dados) {
                 $("#div1").html(dados)
 
             });
         });
 
+
         //exercicio 3
         $("#button3").click(function(){
             $.get("http://hawkman.fabricadesoftware.ifc.edu.br/~rafael/lojinha/ajax/produtos.php",
                 {
-                    //var valor = $("input[name = ]")
-
                     categoria: $("input").val()
 
                 }, function (dados) {
-                $("#div1").html(dados)
+                $("#div1").html(dados);
 
             });
 
         });
 
         //exercicio4
+        $("#button4").click(function () {
+            $.get("http://hawkman.fabricadesoftware.ifc.edu.br/~rafael/lojinha/ajax/dados_json.php", function (data) {
+                $("#div1").append("<li>"+data.endereco+"</li>");
+                $("#div1").append("<li>"+data.campus+"</li>");
+                $("#div1").append("<li>"+data.ies+"</li>");
+                $("#div1").append("<li>"+data.cursos+"</li>");
+                $("#div1").append("<li>"+data.municipio+"</li>");
+                $("#div1").append("<li>"+data.uf+"</li>");
+            });//fecha o get
+        }); //fecha funcao
+
     });
 </script>
 </head>
@@ -53,6 +63,7 @@
     <input type="number" name="">
     <button id="button3">EXE3</button>
 
+    <button id="button4">EXE4</button>
 
 </body>
 </html>
