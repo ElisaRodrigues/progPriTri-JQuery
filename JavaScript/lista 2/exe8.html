@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EXE 7.2</title>
+    <script type="text/javascript">
+
+        var anos, mes, dias, horasAno, horasMes, horasDia, total;
+
+        anos = prompt("Informe sua idade:");
+        mes = prompt("Informe quantos meses que foi seu ultimo aniversario:");
+        dias = prompt("Informe quantos dias foi seu ultimo aniversario de mes (de 0 a 31):");
+
+        horasAno = 8760 * anos;
+
+        horasMes = 730.001 * mes;
+
+        horasDia = 24.000006576 * dias;
+
+        total = horasAno + horasMes + horasDia;
+
+        alert("Você tem aproximadamente " + total + " horas de vida e em ano" + horasAno);
+
+    </script>
+</head>
+<body>
+</body>
+</html>
